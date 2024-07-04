@@ -5,33 +5,23 @@
 #include <algorithm>
 
 template<typename T>
-void print_container(const T& container)
+void print_container(const T& container, const std::string& delimiter, std::ostream& os = std::cout)
 {
-    bool first = true;
-    for (const auto& item : container)
-    {
-        if (!first)
-        {
-            std::cout << ", ";
-        }
-
-        std::cout << item;
-        first = false;
-    }
-    std::cout << std::endl;
+    std::copy(std::begin(container), std::end(container), std::ostream_iterator<typename T::value_type>));
+    os << std::endl;
 }
 
 
 int main()
 {
     std::set<std::string> test_set = { "one", "two", "three", "four" };
-    print_container(test_set); 
+    print_container(test_set, ", ");
 
     std::list<std::string> test_list = { "one", "two", "three", "four" };
-    print_container(test_list); 
+    print_container(test_list, ", ");
 
     std::vector<std::string> test_vector = { "one", "two", "three", "four" };
-    print_container(test_vector);
+    print_container(test_vector, ", ");
 
     return 0;
 }

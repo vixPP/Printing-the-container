@@ -24,6 +24,7 @@
     <ProjectGuid>{b8f0608d-4967-42fb-ab3d-fff3366a8f15}</ProjectGuid>
     <RootNamespace>My2Печатьконтейнера</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>2. Printing_the_container</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
